@@ -7,7 +7,7 @@
 		$font_size = 14;
 		$width = 130;
 		$height = 27;
-		$alphabet = array('a','A','c','C','d','D','e','E','f','F','g','G','h','H','j','J','m','M','n','N','p','P','r','R','s','S','t','T','v','V','w','W','Y','y','z','Z','2','3','4','5','6','7','9');
+		$alphabet = array('a','A','c','C','d','D','e','E','f','F','g','G','h','H','j','J','m','M','p','P','r','R','s','S','t','T','v','V','w','W','Y','y','z','Z','2','3','4','5','6','7');
 
 		$img = imagecreate($width, $height);
 		$bg = imagecolorallocate($img, 250, 250, 250); 

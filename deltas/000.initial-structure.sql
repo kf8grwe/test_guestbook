@@ -12,5 +12,6 @@ CREATE TABLE `messages` (
 	`text` TEXT(1024) CHARACTER SET utf8 COLLATE utf8_general_ci  NOT NULL , 
 	`is_approved` BOOLEAN NOT NULL DEFAULT FALSE , 
 	`date_created` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP , 
-	PRIMARY KEY (`message_id`) 
+	PRIMARY KEY (`message_id`),
+	FOREIGN KEY (`user_id`) REFERENCES `users`(`user_id`) ON UPDATE CASCADE ON DELETE CASCADE
 ) ENGINE = InnoDB;

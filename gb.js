@@ -30,9 +30,9 @@ function getApproved () {
 			a = JSON.parse(a);
 			var html = '';
 			a.forEach(function(entry) {
-				html += '<div class="row"><div class="col-sm-6">' + entry[0] + ': ' + entry[1] + '</div></div>';
+				html += '<div class="row"><div class="col-sm-6">' + entry[0] + ': <span class="message-author">' + entry[1] + '</div></div>';
 				html += '<div class="row"><div class="col-sm-12">' + entry[2] + '</div></div>';
-				html += '<div class="row"><div class="col-sm-12">' + entry[3] + '</div></div><br>';
+				html += '<div class="row"><div class="col-sm-12 message-date">' + entry[3] + '</div></div><br>';
 			});
 			document.getElementById("approved-content").innerHTML=html;
 		}  
@@ -138,6 +138,7 @@ function submitForm() {
 				addMessage($('input[name="username"]').val(),$('input[name="email"]').val(),$('input[name="header"]').val(),$('textarea[name="text"]').val());
 			} else {
 				alert('invalid captcha');
+				$('#captcha').click();
 			}
 		}
 	});

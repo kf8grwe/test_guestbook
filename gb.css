@@ -8,6 +8,9 @@ body {
 #total {
 	display:none;
 }
+#total-content a {
+	cursor: pointer;
+}
 #manage {
 	display:none;
 }
@@ -27,4 +30,11 @@ body {
 #captcha {
 	margin-left: 3px;
 	margin-top: -3px;
+}
+.message-author {
+	font-weight: bold;
+}
+.message-date {
+	color: #555;
+	font-size: 12px;
 }
